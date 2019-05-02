@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    title User Page
+    link(href='/css/user.css', rel='stylesheet')
+    
+  body
+    .header
+      if flashMsg.length > 0
+        .alert #{flashMsg}
+      h2 Push Notifications by #{username}
+    .row
+      .leftcolumn
+        each post in posts
+          .card
+            h2 #{post.title} to #{post.audience}
+              .edit
+                a(href='/posts/edit/' + post._id) Edit
+                a(href='/posts/delete/' + post._id) Delete
+            h5 #{post.date}
+            .fakeimg(style='height:200px;') #{post.image}
+            p #{post.message}
+      .rightcolumn
+        .card
+          h2 
+            a(href='/posts/newpost') New Notification
+          h2 Audience
+          h2 Users
+    .footer
+      h2 Footer stuff here
