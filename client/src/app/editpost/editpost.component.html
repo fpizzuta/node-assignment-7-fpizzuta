@@ -1,0 +1,21 @@
+<div class="box">
+  <h2>New Notification</h2>
+  <form #form="ngForm">
+    <div class="inputBox">
+      <input type="text" name="title" value="post.title" required=""/>
+      <label>Title</label>
+    </div>
+    <div class="inputBox"><input type="date" name="date" value="post.date.toISOString().substring(0,10)" required="" [ngModel]="post.title"/></div>
+    <div class="inputBox"><input type="text" name="audience" value="post.audience" required=""/>
+      <label>Audience</label>
+    </div>
+    <div class="inputBox"><input type="text" name="image" value="post.image" required=""/>
+      <label>Image</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="message" value="post.message" required=""/>
+      <label>Message</label>
+    </div>
+    <input type="submit" name="" value="Submit"/>
+  </form>
+</div>

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://node.pizzuta.com:8083'
+  apiURL: 'http://node.pizzuta.com:8082'
 };
 
 /*

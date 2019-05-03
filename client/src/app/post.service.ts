@@ -18,4 +18,11 @@ export class PostService {
   deletePosts(id){
     return this.http.delete(this.apiURL + '/api/delete/'+id);
   }
+
+  getPost(id){
+    return this.http.get(this.apiURL + '/api/posts/'+id);
+  }
+  updatePost(id,post){
+    return this.http.put(this.apiURL + '/api/posts/'+id,post);
+  }
 }
