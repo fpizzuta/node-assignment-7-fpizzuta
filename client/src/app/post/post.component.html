@@ -1,8 +1,9 @@
 
     <h2>{{ post.title }}
         <div class="edit">
-          <a routerLink="/postdetail/{{post._id}}">Edit</a>
-          <a href="#">Delete</a>
+          <a routerLink="/editpost/{{post._id}}">Edit</a>
+          <!-- <button type="button" (click)="deletePost()">Delete</button> -->
+          <a href='#' (click)="deletePost()">Delete</a>
         </div>
     </h2>
     <h5>{{ post.date }}</h5>

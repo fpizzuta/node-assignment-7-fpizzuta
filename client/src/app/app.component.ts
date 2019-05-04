@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from './post.service';
 import { environment } from '../environments/environment';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class AppComponent {
   postList = null;
   apiURL = '';
   
-  constructor(private postService:PostService){
+  constructor(private postService:PostService,private flashMessage: FlashMessagesService){
     //here
   }
 
@@ -27,4 +28,6 @@ export class AppComponent {
     this.apiURL = environment.apiURL; 
     console.log('apiURL '+this.apiURL);
   }
+
+  
 }

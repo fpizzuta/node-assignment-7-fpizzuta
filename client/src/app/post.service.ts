@@ -15,8 +15,8 @@ export class PostService {
     return this.http.get(this.apiURL + '/api/posts');
   }
 
-  deletePosts(id){
-    return this.http.delete(this.apiURL + '/api/delete/'+id);
+  deletePost(id){
+    return this.http.delete(this.apiURL + '/api/posts/'+id);
   }
 
   getPost(id){
@@ -25,4 +25,9 @@ export class PostService {
   updatePost(id,post){
     return this.http.put(this.apiURL + '/api/posts/'+id,post);
   }
+
+  newPost(post){
+    return this.http.post(this.apiURL + '/api/posts/',post);
+  }
+
 }

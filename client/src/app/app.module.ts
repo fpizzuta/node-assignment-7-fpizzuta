@@ -10,12 +10,15 @@ import { AllPostsComponent } from './all-posts/all-posts.component';
 import { PostdetailComponent } from './postdetail/postdetail.component';
 import { FormsModule } from '@angular/forms';
 import { EditpostComponent } from './editpost/editpost.component';
+import { NewpostComponent } from './newpost/newpost.component';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 const routes: Routes = [
   { path: '', redirectTo: '/allposts', pathMatch: 'full'},
   { path: 'allposts', component: AllPostsComponent },
   { path: 'postdetail/:id', component: PostdetailComponent },
-  { path: 'editpost/:id', component: PostdetailComponent }
+  { path: 'editpost/:id', component: EditpostComponent },
+  { path: 'newpost', component: NewpostComponent }
 ];
 
 @NgModule({
@@ -24,7 +27,8 @@ const routes: Routes = [
     PostComponent,
     AllPostsComponent,
     PostdetailComponent,
-    EditpostComponent
+    EditpostComponent,
+    NewpostComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(
       routes
-    )
+    ),
+    FlashMessagesModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

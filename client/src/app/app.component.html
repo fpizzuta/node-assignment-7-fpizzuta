@@ -1,25 +1,19 @@
 <div class="header">
   <h2>Push Notifications by placeholder </h2>
 </div>
-<!-- <div class="row">
+
+<div class="row">
+    <flash-messages class="flash"></flash-messages>
   <div class="leftcolumn">
-    <app-post 
-      *ngFor="let postObject of postList" 
-      [post]="postObject"
-      [apiURL]="apiURL"
-    >
-    </app-post>
+    <router-outlet></router-outlet>
   </div>
   <div class="rightcolumn">
-    <div class="card">
-      <h2> <a href="#">New Notification</a></h2>
-      <h2>Audience</h2>
-      <h2>Users</h2>
+      <div class="card">
+        <h2> <a href="/newpost">New Notification</a></h2>
+        <h2>Audience</h2>
+        <h2>Users</h2>
+      </div>
     </div>
-  </div>
-</div> -->
-<div class="container">
-  <router-outlet></router-outlet>
 </div>
 <div class="footer">
   <h2>Footer stuff here</h2>

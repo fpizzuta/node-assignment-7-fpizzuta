@@ -1,21 +1,25 @@
+
+
 <div class="box">
-  <h2>New Notification</h2>
-  <form #form="ngForm">
-    <div class="inputBox">
-      <input type="text" name="title" value="post.title" required=""/>
-      <label>Title</label>
-    </div>
-    <div class="inputBox"><input type="date" name="date" value="post.date.toISOString().substring(0,10)" required="" [ngModel]="post.title"/></div>
-    <div class="inputBox"><input type="text" name="audience" value="post.audience" required=""/>
-      <label>Audience</label>
-    </div>
-    <div class="inputBox"><input type="text" name="image" value="post.image" required=""/>
-      <label>Image</label>
-    </div>
-    <div class="inputBox">
-      <input type="text" name="message" value="post.message" required=""/>
-      <label>Message</label>
-    </div>
-    <input type="submit" name="" value="Submit"/>
-  </form>
-</div>
+    <h2>Edit Notification</h2>
+    <form #form="ngForm" (ngSubmit)="updatePost(form.value)">
+      <div class="inputBox">
+        <input type="hidden" id="_id" name="_id" value="post._id" [ngModel]="post._id"/>
+        <input type="hidden" id="date" name="date" value="post.date" [ngModel]="post.date"/>
+        <input type="text" name="title" value="post.title" required="" [ngModel]="post.title"/>
+        <label>Title</label>
+      </div>
+      <div class="inputBox"><input type="text" name="audience" value="post.audience" required="" [ngModel]="post.audience"/>
+        <label>Audience</label>
+      </div>
+      <div class="inputBox"><input type="text" name="image" value="post.image" required="" [ngModel]="post.image"/>
+        <label>Image</label>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="message" value="post.message" required="" [ngModel]="post.message"/>
+        <label>Message</label>
+      </div>
+      <input type="submit" name="" value="Submit"/>
+    </form>
+  </div>
+  <a routerLink="/allposts">back to posts</a>

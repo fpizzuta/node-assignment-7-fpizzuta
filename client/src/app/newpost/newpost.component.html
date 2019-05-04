@@ -1,0 +1,28 @@
+
+  <div class="box">
+      <h2>Create New Post</h2>
+      <form #newpostForm="ngForm" (ngSubmit)="save(newpostForm)">
+        <div class="inputBox">
+          <input type="text" name="title" placeholder="Title" [(ngModel)]="post.title" required/>
+          <label>Title</label>
+        </div>
+        <div class="inputBox">
+          <input type="date" name="date" required [(ngModel)]="post.date"/>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="audience" placeholder="Audience" required [(ngModel)]="post.audience"/>
+          <label>Audience</label>
+        </div>
+        <div class="inputBox"><input type="text" name="image" placeholder="Image URL" required [(ngModel)]="post.image" required/>
+          <label>Image</label>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="message" placeholder="Message" required [(ngModel)]="post.message" required/>
+          <label>Message</label>
+        </div>
+        <input type="submit" name="" value="Submit"/>
+      </form>
+    </div>
+    
+      <a routerLink="/allposts">back to posts</a>
+   

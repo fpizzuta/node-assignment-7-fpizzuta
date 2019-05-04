@@ -82,6 +82,11 @@
     transition: visibility 0s 2s, opacity 2s linear; */
      -webkit-animation: fadeout 5s linear 1 normal forwards;
   }
+
+  .flash {
+    text-align: center;
+    font-size: 1em;
+  }
   
   @-webkit-keyframes fadeout{
       from{
