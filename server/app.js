@@ -42,13 +42,11 @@ app.use('/create', posts);
 app.use('/users', users);
 app.use('/user', users);
 app.use('/login', login);
-app.use('/', login);
-
+// app.use('/', login);
 app.use('/api/posts', apiposts);
-
-// app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', express.static('./public'));
-// app.use('/static', express.static('./public'));
+// app.use('/', express.static('./public'));
+app.use('/', express.static('../client/dist/angularStart'));
+app.use('*', express.static('../client/dist/angularStart'));
 
 app.use((req, res, next)=>{
   res.status(404);
